@@ -17,6 +17,8 @@ hbs.registerHelper('screamIt', (text) => {
   return text.toUpperCase();
 });
 
+const port = process.env.PORT || 3000;
+
 //Initializing web-server
 var app = express();
 
@@ -68,6 +70,6 @@ app.get('/bad', (req, res) => {
 });
 
 //Launching web server on port 3000
-app.listen(3000, () => {
-  console.log('Server is up on port 3000');
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
 });
