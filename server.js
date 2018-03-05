@@ -62,6 +62,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+//Handler for '/projects' GET request (it use hbs templating)
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects'
+  });
+});
+
 //Handler of '/bad' request
 app.get('/bad', (req, res) => {
   res.send({
